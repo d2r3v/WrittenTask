@@ -9,16 +9,14 @@ public class Question_1 {
 
     static boolean IsPrime(int n)
     {
-        boolean prime = true;
         for (int i = 2; i <= n / 2; i++)
         {
             int a = n % i;
             if (a == 0) {
-                prime = false;
-                return prime;
+                return false;
             }
         }
-return prime;
+return true;
     }
 
     static int [] primeFac(int c, int f,int p)
