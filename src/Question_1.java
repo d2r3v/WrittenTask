@@ -17,6 +17,5 @@ public class Question_1 {
         }
 return prime;
 
-
     }
 }
