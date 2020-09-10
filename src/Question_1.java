@@ -4,9 +4,8 @@ import java.util.List;
 public class Question_1 {
 
     public static void main(String[] Args) {
-        System.out.println(Question_1.IsPrime(19));
-        for (int element: Question_1.primeFac(25,2)) {
-            System.out.println(element);
+        if (Question_1.IsPrime(25)) {
+            Question_1.factors(25, 1);
         }
     }
 
@@ -22,20 +21,15 @@ public class Question_1 {
 return true;
     }
 
-    static List<Integer> primeFac(int c, int f)
+    static void factors(int n, int i)
     {
-
-        if (c == 1)
-        {
-            ArrayList<Integer> Na = new ArrayList<Integer>();
+        if (i <= n) {
+            if (n % i == 0) {
+                System.out.print(i + " ");
+            }else
+            factors(n, i + 1);
         }
-        if (c % f == 0) {
-            List<Integer> fac = primeFac(c/f, f);
-            fac.add(f);
-            return fac;
-        } else
-            return primeFac(c, f+1);
     }
-    }
+}
 
 
