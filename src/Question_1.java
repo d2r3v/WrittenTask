@@ -4,30 +4,30 @@ import java.util.List;
 public class Question_1 {
 
     public static void main(String[] Args) {
-        if (Question_1.IsPrime(25)) {
-            Question_1.factors(25, 1);
-        }
-    }
+        System.out.println(Question_1.IsPrime(19));
 
-    static boolean IsPrime(int n)
-    {
-        for (int i = 2; i <= n / 2; i++)
-        {
+            Question_1.primeFac(25, 1);
+        }
+
+
+    static boolean IsPrime(int n) {
+        for (int i = 2; i <= n / 2; i++) {
             int a = n % i;
             if (a == 0) {
                 return false;
             }
         }
-return true;
+        return true;
     }
 
-    static void factors(int n, int i)
-    {
-        if (i <= n) {
-            if (n % i == 0) {
-                System.out.print(i + " ");
-            }else
-            factors(n, i + 1);
+   public static void primeFac(int f, int c) {
+
+        if (c <= f) {
+            if (f % c == 0) {
+                System.out.print(c + " ");
+            }
+
+            primeFac(f, c + 1);
         }
     }
 }
