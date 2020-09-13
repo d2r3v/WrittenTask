@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Question_1 {
     static int sum = 0;
 
@@ -8,7 +5,7 @@ public class Question_1 {
 
         Question_1 obj = new Question_1();
         System.out.println(obj.IsPrime(19));
-        obj.primeFac(25, 1);
+        obj.primeFac(3, 2);
         System.out.print(sum);
         }
 
@@ -26,25 +23,31 @@ public class Question_1 {
 
         if (c <= f) {
             if (f % c == 0) {
+                System.out.println(c);
+                f=f/c;
 
-                SumOfNumbers(c);
-
+                getSum(c);
+            }
+            else
+            {
+                c++;
             }
 
-            primeFac(f, c + 1);
+            primeFac(f, c);
         }
     }
 
-    void SumOfNumbers(int a) {
-        int n = 0;
 
-        while(a > 0)
+    void getSum(int n)
+    {
+
+        while (n != 0)
         {
-            n = a % 10;
-            this.sum = this.sum + n;
-            a = a / 10;
+            sum = sum + n % 10;
+            n = n/10;
         }
-     System.out.print(sum);
+
+
     }
 }
 
