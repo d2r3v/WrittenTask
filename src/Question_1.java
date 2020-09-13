@@ -5,7 +5,8 @@ public class Question_1 {
 
         Question_1 obj = new Question_1();
         System.out.println(obj.IsPrime(19));
-        obj.primeFac(3, 2);
+
+        obj.primeFac(11, 2);
         System.out.print(sum);
         }
 
@@ -26,7 +27,7 @@ public class Question_1 {
                 System.out.println(c);
                 f=f/c;
 
-                getSum(c);
+//                getSum(c);
             }
             else
             {
