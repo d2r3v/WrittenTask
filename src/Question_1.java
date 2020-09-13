@@ -2,15 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Question_1 {
+    static int sum = 0;
 
     public static void main(String[] Args) {
-        System.out.println(Question_1.IsPrime(19));
 
-            Question_1.primeFac(25, 1);
+        Question_1 obj = new Question_1();
+        System.out.println(obj.IsPrime(19));
+        obj.primeFac(25, 1);
+        System.out.print(sum);
         }
 
-
-    static boolean IsPrime(int n) {
+    private boolean IsPrime(int n) {
         for (int i = 2; i <= n / 2; i++) {
             int a = n % i;
             if (a == 0) {
@@ -20,15 +22,29 @@ public class Question_1 {
         return true;
     }
 
-   public static void primeFac(int f, int c) {
+   private void primeFac(int f, int c) {
 
         if (c <= f) {
             if (f % c == 0) {
-                System.out.print(c + " ");
+
+                SumOfNumbers(c);
+
             }
 
             primeFac(f, c + 1);
         }
+    }
+
+    void SumOfNumbers(int a) {
+        int n = 0;
+
+        while(a > 0)
+        {
+            n = a % 10;
+            this.sum = this.sum + n;
+            a = a / 10;
+        }
+     System.out.print(sum);
     }
 }
 
