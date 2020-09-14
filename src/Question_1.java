@@ -5,28 +5,35 @@ public class Question_1 {
     static int sum1 = 0;
 
     public static void main(String[] Args) {
-Scanner sc = new Scanner(System.in);
-System.out.println("Enter number to be checked");
-int s=sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number to be checked");
+        int s = sc.nextInt();
+        int a = s;
+        int b = s;
         Question_1 obj = new Question_1();
-        obj.getSum1(s);
-        System.out.println(sum1);
+        obj.SumOfNumbers1(b);
+        obj.primeFac(a, 2);
 
-           obj.primeFac(s, 2);
-        System.out.println(sum);
+if(obj.IsPrime(s)== false) {
 
-       if (sum1 == sum)
-       {
-           System.out.println("Number entered is smith");
-       }
-       else
-       {
-           System.out.println("Number entered is not smith ");
-       }
+    if (sum1 == sum) {
+        System.out.println("Number entered is smith");
+
+    } else
+
+        System.out.println("Number entered is not smith ");
+}
+else
+    {
+        System.out.println("Number entered is prime");
+
+    }
+
+
         }
 
     private boolean IsPrime(int n) {
-        for (int i = 2; i <= n / 2; i++) {
+        for (int i = 2; i <= n/2; ++i) {
             int a = n % i;
             if (a == 0) {
                 return false;
@@ -39,7 +46,7 @@ int s=sc.nextInt();
 
         if (c <= f) {
             if (f % c == 0) {
-                getSum(c);
+                SumOfNumbers(c);
                 f=f/c;
             }
             else
@@ -52,29 +59,30 @@ int s=sc.nextInt();
     }
 
 
-    void getSum(int n)
+    void SumOfNumbers(int x)
     {
 
-        while (n != 0)
+        while (x != 0)
         {
-            sum = sum + n % 10;
-            n = n/10;
+            this.sum = this.sum + x % 10;
+            x = x/10;
         }
 
 
     }
 
-    void getSum1(int n)
+    void SumOfNumbers1(int b)
     {
 
-        while (n != 0)
+        while (b != 0)
         {
-            sum1 = sum1 + n % 10;
-            n = n/10;
+            this.sum1 = this.sum1 + b % 10;
+            b = b/10;
         }
 
 
     }
+
 }
 
 
