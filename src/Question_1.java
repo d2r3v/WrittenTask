@@ -14,23 +14,23 @@ public class Question_1 {
         obj.SumOfNumbers1(b);
         obj.primeFac(a, 2);
 
-if(obj.IsPrime(s)== false) {
+        if(obj.IsPrime(s)== false) {
 
-    if (sum1 == sum) {
-        System.out.println("Number entered is smith");
+            if (sum1 == sum) {
+                System.out.println("Number entered is smith");
 
-    } else
+            } else
 
-        System.out.println("Number entered is not smith ");
-}
-else
-    {
-        System.out.println("Number entered is prime");
-
-    }
-
+                System.out.println("Number entered is not smith ");
+        }
+        else
+        {
+            System.out.println("Number entered is prime");
 
         }
+
+
+    }
 
     private boolean IsPrime(int n) {
         for (int i = 2; i <= n/2; ++i) {
@@ -42,7 +42,7 @@ else
         return true;
     }
 
-   private void primeFac(int f, int c) {
+    private void primeFac(int f, int c) {
 
         if (c <= f) {
             if (f % c == 0) {
@@ -61,11 +61,12 @@ else
 
     void SumOfNumbers(int x)
     {
+        Question_1 obj = new Question_1();
 
-        while (x != 0)
+       if(x!=0)
         {
             this.sum = this.sum + x % 10;
-            x = x/10;
+            obj.SumOfNumbers(x/10);
         }
 
 
@@ -73,16 +74,15 @@ else
 
     void SumOfNumbers1(int b)
     {
-
-        while (b != 0)
+        Question_1 obj = new Question_1();
+        if(b!=0)
         {
             this.sum1 = this.sum1 + b % 10;
-            b = b/10;
+            obj.SumOfNumbers1(b/10);
         }
 
 
     }
 
 }
-
 
