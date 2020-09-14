@@ -10,10 +10,11 @@ System.out.println("Enter number to be checked");
 int s=sc.nextInt();
         Question_1 obj = new Question_1();
         obj.getSum1(s);
-       if(obj.IsPrime(s)) {
-           obj.getSum(s);
+        System.out.println(sum1);
+
            obj.primeFac(s, 2);
-       }
+        System.out.println(sum);
+
        if (sum1 == sum)
        {
            System.out.println("Number entered is smith");
