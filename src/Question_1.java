@@ -1,13 +1,27 @@
+import java.util.Scanner;
+
 public class Question_1 {
     static int sum = 0;
+    static int sum1 = 0;
 
     public static void main(String[] Args) {
-
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter number to be checked");
+int s=sc.nextInt();
         Question_1 obj = new Question_1();
-        System.out.println(obj.IsPrime(19));
-
-        obj.primeFac(11, 2);
-        System.out.print(sum);
+        obj.getSum1(s);
+       if(obj.IsPrime(s)) {
+           obj.getSum(s);
+           obj.primeFac(s, 2);
+       }
+       if (sum1 == sum)
+       {
+           System.out.println("Number entered is smith");
+       }
+       else
+       {
+           System.out.println("Number entered is not smith ");
+       }
         }
 
     private boolean IsPrime(int n) {
@@ -24,10 +38,8 @@ public class Question_1 {
 
         if (c <= f) {
             if (f % c == 0) {
-                System.out.println(c);
+                getSum(c);
                 f=f/c;
-
-//                getSum(c);
             }
             else
             {
@@ -45,6 +57,18 @@ public class Question_1 {
         while (n != 0)
         {
             sum = sum + n % 10;
+            n = n/10;
+        }
+
+
+    }
+
+    void getSum1(int n)
+    {
+
+        while (n != 0)
+        {
+            sum1 = sum1 + n % 10;
             n = n/10;
         }
 
