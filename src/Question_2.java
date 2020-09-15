@@ -31,10 +31,11 @@ public class Question_2 {
 
     private static boolean CommonFriends(int[][] a,int p,int q) {
             for (int j = 0; j < 5; j++) {
+                if(a[p][j]==1){
                     if (a[p][j] == a[q][j]) {
                         return true;
                     }
-                }
+                }}
             return false;
             }
         }
