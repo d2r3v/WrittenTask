@@ -40,6 +40,16 @@ public class Question_2 {
             }
         }
 
+/*
+for (int j = 0; j < 5; j++) {
+ b[1][j]=a[1][j];
+}
+for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+            a[i][j]=b[i][j];
+            b[i]=a[j++];
+            }
 
+ */
 
 
