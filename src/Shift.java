@@ -24,15 +24,22 @@ class Shift {
     }
 
     void cyclic(Shift P) {
-        for (int j = 0; j < n; j++) {
-            P.mat[0][j] = mat[0][j];
-        }
-        for (int i = 0; i < m; i++) {
+        int []b=new int[n];
+
+       /* for (int s = 0; s <n; s++) {
+            b[s]=P.mat[m][s];
+        }*/
+        int a=mat[1][0];
+        for (int i = 0; i < --m; i++) {
             for (int j = 0; j < n; j++) {
-                mat[i][j] = P.mat[i][j];
-                P.mat[i] = mat[j++];
+                P.mat[i][j] = a;
+                a = P.mat[++i][j];
+                --i;
             }
-        }
+        }/*
+        for (int q = 0; q <= n; q++) {
+            P.mat[0][q] = b[q];
+        }*/
     }
 
     void display() {
