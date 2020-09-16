@@ -17,10 +17,15 @@ public class Question_2 {
 
     }
 
+    /**
+     *
+     * @param s s contains the vales of the 2d array to be checked from for friends
+     */
     private void Friends(int[][] s) {
 
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
+                // if at any point there is a 1 means there is a friendship, so sum+1 counts the number of friendships
                 if (s[i][j] == 1) {
                     sum++;
                 }
@@ -28,8 +33,16 @@ public class Question_2 {
         }
     }
 
+    /**
+     *
+     * @param a a is the 2d array with all the data about friends
+     * @param p p is the first person to be checked if he has a common friend with the second person
+     * @param q q is the second person to be checked if he has a common friend with the first person
+     * @return returns true when j is a friend to p and q
+     */
     private static boolean CommonFriends(int[][] a,int p,int q) {
             for (int j = 0; j < 5; j++) {
+                // if p is a friend to j and q is also a friend to j, return true
                 if(a[p][j]==1){
                     if (a[p][j] == a[q][j]) {
                         return true;
@@ -38,19 +51,4 @@ public class Question_2 {
             return false;
             }
         }
-
-/*
-for (int j = 0; j < 5; j++) {
- b[1][j]=a[1][j];
-}
-for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-            a[i][j]=b[i][j];
-            b[i]=a[j++];
-            }
-
-
-
-
- */
 
