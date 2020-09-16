@@ -26,29 +26,29 @@ class Shift {
     void cyclic(Shift P) {
 
         int[] b = new int[n];
-m--;
-      /*  for (int s = 0; s <n; s++) {
-            b[s]=P.mat[P.m-1][s];
-        }*/
+        m--;
+        for (int s = 0; s <n; s++) {
+            b[s]=P.mat[P.m][s];
+        }
         for (int i = m; i > 0; i--) {
             for (int j = 0; j < n; j++) {
                 P.mat[i][j] = P.mat[i-1][j];
             }
         }
-        /*for (int q = 0; q < n; q++) {
+        for (int q = 0; q < n; q++) {
             P.mat[0][q] = b[q];
-        }*/
+        }
     }
 
     void display() {
 
-        for (int s = 0; s < m; s++) {
-            System.out.println("");
-            for (int q = 0; q < n; q++) {
-                System.out.print(mat[s][q] + " ");
+        for (int r = 0; r < mat.length; r++) {
+            for (int t = 0; t < mat[r].length; t++) {
+                System.out.print(mat[r][t] + " ");
             }
-
+            System.out.println();
         }
+
     }
 
     void input() {
