@@ -7,15 +7,15 @@ public class Question_1 {
     public static void main(String[] Args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number to be checked");
+       // Initializing number to be checked.
         int s = sc.nextInt();
-        int a = s;
-        int b = s;
+        //object creation
         Question_1 obj = new Question_1();
-        obj.SumOfNumbers1(b);
-        obj.primeFac(a, 2);
-
+        obj.SumOfNumbers1(s);
+        obj.primeFac(s, 2);
+            //to check if number is not prime
         if(obj.IsPrime(s)== false) {
-
+            //to check if sum of factors is equal to sum of digits
             if (sum1 == sum) {
                 System.out.println("Number entered is smith");
 
@@ -32,6 +32,11 @@ public class Question_1 {
 
     }
 
+    /**
+     *
+     * @param n n is the variable to be checked for prime.
+     * @return  return type is boolean according to prime or not prime.
+     */
     private boolean IsPrime(int n) {
         for (int i = 2; i <= n/2; ++i) {
             int a = n % i;
@@ -42,6 +47,11 @@ public class Question_1 {
         return true;
     }
 
+    /**
+     *
+     * @param f f is the number to be factorized.
+     * @param c c is the divisor or the smallest factor of the number.
+     */
     private void primeFac(int f, int c) {
 
         if (c <= f) {
@@ -58,7 +68,10 @@ public class Question_1 {
         }
     }
 
-
+    /**
+     *
+     * @param x x is the number to be taken sum of.
+     */
     void SumOfNumbers(int x)
     {
         Question_1 obj = new Question_1();
@@ -72,6 +85,10 @@ public class Question_1 {
 
     }
 
+    /**
+     *
+     * @param b b is the number to be taken sum.
+     */
     void SumOfNumbers1(int b)
     {
         Question_1 obj = new Question_1();
